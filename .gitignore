@@ -150,5 +150,6 @@ TRAIN/work_dirs/posec3d/3HL/*.pth
 !TRAIN/work_dirs/posec3d/3HL/epoch_20.pth
 !TRAIN/work_dirs/posec3d/3HL/epoch_40.pth
 !TRAIN/data/PoseC3D/*.pkl
+!TRAIN/work_dirs/posec3d/3HL/*.log
 TRAIN/work_dirs/**/*.log.json
 
