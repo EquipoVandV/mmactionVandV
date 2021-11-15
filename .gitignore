@@ -146,7 +146,7 @@ mmaction/.mim
 # ignore some train files unused
 
 TRAIN/work_dirs/posec3d/3HL/*.pth
-!TRAIN/work_dirs/posec3d/3HL/best_top1_acc_epoch_15.pth.pth
+!TRAIN/work_dirs/posec3d/3HL/best_top1_acc_epoch_15.pth
 !TRAIN/work_dirs/posec3d/3HL/epoch_20.pth
 !TRAIN/work_dirs/posec3d/3HL/epoch_40.pth
 !TRAIN/data/PoseC3D/*.pkl
