@@ -74,17 +74,19 @@ def detection_inference(args, frame_paths):
         result = result[0][result[0][:, 4] >= args.det_score_thr]
 
         #Max Area Filter
-        area=0
-        for k in range(len(result)):
+        try:
+            area=0
+            for k in range(len(result)):
 
-            if (result[k][2]-result[k][0])*(result[k][3]-result[k][1])>area and result[k][4]>=args.det_score_thr:
-                    area=(result[k][2]-result[k][0])*(result[k][3]-result[k][1])
-                    result[k]
-                    result_max=[np.asarray(result[k])]
-        result=np.asarray(result_max)
-        if len(result)!=1:
-            logging.critical('Hay mas de 1')    
-
+                if (result[k][2]-result[k][0])*(result[k][3]-result[k][1])>area and result[k][4]>=args.det_score_thr:
+                        area=(result[k][2]-result[k][0])*(result[k][3]-result[k][1])
+                        result[k]
+                        result_max=[np.asarray(result[k])]
+            result=np.asarray(result_max)
+            if len(result)!=1:
+                logging.critical('Hay mas de 1')    
+        except:
+            pass
         results.append(result)
         prog_bar.update()
     return results
